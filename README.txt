@@ -1,11 +1,14 @@
-若要改成连到自己FTP 需要先设置 FTP Server 并创建使用者
+Download FileZilla Client、FileZilla Server
+https://filezilla-project.org/
+
+教学: 若要改成连到自己FTP 需要先设置 FTP Server 并创建使用者
 https://blog.tarswork.com/post/filezilla-server-install-and-usage
 https://blog.hungwin.com.tw/ftp-filezilla/
-
+ 
 step1: call api 取rsa公私钥 ,md5key (可能会因为网站挂到而导致值是null或其他错误)
 step2: 整理数据，并将其余参数: 平台公钥组完产生服务器资料
 step3: 服务器资料写入档案
-step4: 压缩文件固定格式 daifu000/merchantNo/checkOrderKey.txt
+step4: 压缩文件固定格式 daifu000/merchantNo/checkOrderKey.txt (最外层要有Temp资料夹存放写入跟压缩档)
 step5: 取得zip档案上传ftp
 
 POST application/json http://10.25.12.171:8080/api/getDaifuRSAFile
