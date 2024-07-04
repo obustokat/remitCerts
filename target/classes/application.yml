@@ -4,3 +4,5 @@ ftp:
   user: user1
   pass: qwe123
   remotePath: /user1/certs/
+server:
+  port: 5678
