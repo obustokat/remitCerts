@@ -16,7 +16,7 @@ step3: 服务器资料写入档案
 step4: 压缩文件固定格式 daifu000/merchantNo/checkOrderKey.txt (最外层要有Temp资料夹存放写入跟压缩档)
 step5: 取得zip档案上传ftp
 
-POST application/json http://10.25.12.171:8080/api/getDaifuRSAFile
+POST application/json http://localhost:5678/api/getDaifuRSAFile
 {
 	"rsaThirdPubKey": "123",
 	"daifuId": "daifu001",
