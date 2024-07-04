@@ -1,0 +1,6 @@
+ftp:
+  server: localhost
+  port: 21
+  user: user1
+  pass: qwe123
+  remotePath: /user1/certs/
