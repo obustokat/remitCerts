@@ -24,7 +24,7 @@ https://blog.tarswork.com/post/filezilla-server-install-and-usage
 
 https://blog.hungwin.com.tw/ftp-filezilla/
 
-## ngrok
+## Ngrok
 ngrok 的转发（Forwarding）功能的确是让外网通过指定的 ngrok 地址（URL）访问你本地的服务。
 例如，如果你在本地运行了一个服务在 localhost:8080，并通过 ngrok 创建了一个隧道，你会看到类似这样的输出
 
@@ -94,7 +94,7 @@ curl -X POST http://localhost:8080/api/getDaifuRSAFile \
 }
 ```
 
-download ftp file use ngrok forwarding address: 
+download ftp file use ngrok forwarding address: 依当下forward为主
 
 ```bash
 curl -OJL -X GET https://b7eb-2001-b400-e450-e110-4474-5d24-6ac8-a246.ngrok-free.app/api/ftp_files/daifu005.zip
