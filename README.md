@@ -1,8 +1,7 @@
-spring boot ftp ngrok 
-day5 
+## Introduction
 
-用途: 公司用快速产RSA服务器资料小工具
-结果: 下载后会得到路径为 daifu000/merchantNo/checkOrderKey.txt 的zip档
+Spring boot FTP Ngrok
+day5 (工作用) 快速产RSA服务器资料小工具
 
 checkOrderKey.txt:
 ```
@@ -13,15 +12,17 @@ md5Key=df84bf8cf4c44caeede3e10fcbe023ab
 ```
 
 ## FTP 
+
 Download FileZilla Client、FileZilla Server
+
 https://filezilla-project.org/
 
 
 教学看这两篇: 若要改成连到自己FTP 需要先设置 FTP Server 并创建使用者
-https://blog.tarswork.com/post/filezilla-server-install-and-usage
-https://blog.hungwin.com.tw/ftp-filezilla/
 
-这边ftp位置是设置: D:\FTP\user1\certs (virtual path= / ,Native path= D:/FTP)
+https://blog.tarswork.com/post/filezilla-server-install-and-usage
+
+https://blog.hungwin.com.tw/ftp-filezilla/
 
 ## ngrok
 ngrok 的转发（Forwarding）功能的确是让外网通过指定的 ngrok 地址（URL）访问你本地的服务。
@@ -54,13 +55,14 @@ curl -X DELETE http://127.0.0.1:4040/api/tunne"ID":"bf59ls/{tunnel_name}
 ## 流程
 取得数据 -> 寫入文件 -> 壓縮文件 -> 上传ftp -> ngrok forward -> 下载ftp 的zip档
 
+0. 起FTP Server ,Ngrok ,tomcat 
 1. 取rsa公私钥(预设-密钥长度: 1024bit,密钥格式: PKCS#1) ,md5key(预设-16位小写) 
 这步可能会因为网站挂到而导致出错 (TODO: 掛了要切成自己產)
 2. 取得api数据，并将其余参数:三方平台公钥组完产生服务器资料写入档案
 (TODO: 通过流的方式可以直接将数据从输入流上传到FTP服务器，从而避免将文件临时存储在本地)
 3. 压缩文件固定格式 daifu000/merchantNo/checkOrderKey.txt (写入 当前工作目录 + remitCerts/temp/)
-4. 获取文件输入流，指定远程文件路径上传ftp 
-5. 需要载ftp上的档案 ngrok forward 映射localhost，返回给使用者下載連結ftp 文件
+4. 获取文件输入流，指定远程文件路径上传ftp D:\FTP\user1\certs (virtual path= / ,Native path= D:/FTP)
+5. 需要载ftp上的档案 ngrok forward 映射localhost，返回给使用者下載連結ftp 文件，或不打下载api 可以连 FTP Client下载
 
 ## curl
 
