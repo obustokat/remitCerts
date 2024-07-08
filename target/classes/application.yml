@@ -6,3 +6,14 @@ ftp:
   remotePath: /user1/certs/
 server:
   port: 5678
+spring:
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+logging:
+  file:
+    name: D:\workspace\remitCerts\log\catalina.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
+      max-file-size: 1MB

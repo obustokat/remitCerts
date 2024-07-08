@@ -2,13 +2,8 @@ package com.bobwu.test;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.*;
-import java.lang.invoke.SwitchPoint;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,16 +12,16 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class FileUploadToFTP {
-    private final static String SERVER = "10.25.12.171";
-    private final static int PORT = 21; // FTP端口
-    private final static String USER = "user1";
-    private final static String PASS = "qwe123";
-    private final static String REMOTEPATH = "/user1/certs/"; // 上传到FTP服务器上的文件路径和文件名
+    private final static String FTP_SERVER = "10.25.12.171";
+    private final static int FTP_PORT = 21; // FTP端口
+    private final static String FTP_USER = "user1";
+    private final static String FTP_PASS = "qwe123";
+    private final static String FTP_REMOTEPATH = "/user1/certs/"; // 上传到FTP服务器上的文件路径和文件名
 
     // 取得指定档案上传ftp
     public static void main(String[] args) throws IOException {
         String content = "aaa";
-        String daifuId = "daifu002"; // daifu
+        String daifuId = "daifu006"; // daifu
         String merchantNo = "70012"; // 商户号
 
         String currentDir = System.getProperty("user.dir");
@@ -88,10 +83,11 @@ public class FileUploadToFTP {
 
     public static void uploadContentToFTP(String localFilePath ,String method) {
         String content = "";
+        String fileName = "";
         FTPClient ftpClient = new FTPClient();
         try {
-            ftpClient.connect(SERVER, PORT);
-            ftpClient.login(USER, PASS);
+            ftpClient.connect(FTP_SERVER, FTP_PORT);
+            ftpClient.login(FTP_USER, FTP_PASS);
             ftpClient.enterLocalPassiveMode();
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
 
@@ -106,7 +102,8 @@ public class FileUploadToFTP {
                     File localFile = new File(localFilePath);
                     fileInputStream = new FileInputStream(localFile);
                     // 指定远程文件路径
-                    remoteFilePath = REMOTEPATH + localFile.getName();
+                    fileName = localFile.getName();
+                    remoteFilePath = FTP_REMOTEPATH + fileName;
                     System.out.println("开始上传文件...");
                     done = ftpClient.storeFile(remoteFilePath, fileInputStream);
                     fileInputStream.close();
@@ -121,7 +118,9 @@ public class FileUploadToFTP {
                     break;
             }
             if (done) {
+                String downloadUrl = "http://" + FTP_SERVER + FTP_REMOTEPATH + "/" + fileName;
                 System.out.println("文件成功上传到 FTP 服务器");
+                System.out.println("downloadUrl = " + downloadUrl) ;
             } else {
                 System.out.println("文件上传失败");
             }
