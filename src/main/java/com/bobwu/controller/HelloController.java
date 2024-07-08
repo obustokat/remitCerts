@@ -121,6 +121,7 @@ public class HelloController {
 
         // Example: Download file as byte array
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        log.info("path = {}", FTP_REMOTEPATH + filename);
         ftpClient.retrieveFile(FTP_REMOTEPATH + filename, baos);
 
         byte[] fileBytes = baos.toByteArray();

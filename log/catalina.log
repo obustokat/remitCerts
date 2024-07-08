@@ -1,0 +1,817 @@
+2024-07-08 15:00:48.755  INFO 18800 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 18800 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:00:48.758  INFO 18800 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:00:49.782  INFO 18800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:00:49.793  INFO 18800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:00:49.793  INFO 18800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:00:49.871  INFO 18800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:00:49.871  INFO 18800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1057 ms
+2024-07-08 15:00:50.209  INFO 18800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:00:50.218  INFO 18800 --- [main] com.bobwu.App                            : Started App in 1.99 seconds (JVM running for 2.383)
+2024-07-08 15:01:06.047  INFO 18800 --- [http-nio-5678-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:01:06.047  INFO 18800 --- [http-nio-5678-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:01:06.048  INFO 18800 --- [http-nio-5678-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 15:01:06.122  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = Temp/daifu001/70153 ,filePath = Temp/daifu001/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/Temp/daifu001
+2024-07-08 15:01:06.124  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 15:01:06.250  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 15:01:06.851  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:01:06.852  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMuxciOFyFgsojAv\nTd+LgBKY0eKZOLLizDBl8SktolpI1SpLJ83PDwNBhKBiLDpOtUNLN4NqHFD6a5KC\nJFcaGw64ww2GEE6EgVsINOrwoQIojwoCsFb93vPAvGSwrzIhNnRSHP0ycfquQ4nb\nqYDcodOvNgiVi6LbbOitrVcBf85dAgMBAAECgYBJAvK5nuOAD4eXI+2S2kru344j\n3e3\/2OF925yEuRG\/sOmPfl7nG3fzH9HtNyNJRxsb4uMkHK3HrOtQGYvzGK1nhsSA\nr2Cta5BET5SyxNTA0hKGlsSY6gWFpLON3HameDkuunAqUAD89EdHvupbcBDVXGTR\nKnwo8ghnUFcYGy8uNQJBAOdwTgK3LJV\/LKR36Qc\/pZkCu2UiO7w5caWm44QC82I0\n3cYQ4P7FtRMfQeswgYaeumHuUJtahXgiKh1DWOrBjeMCQQDhT1qcmvUY9SCEtDse\niLef5BetLjWZvVAJ9h+r+anqlxs1wn+Q6UGi5f0tqaFhq3cNl24N5wQaVp6EOdHG\nf+a\/AkEAoX7RQL3W4365hQ6TUdaM1Ed+wiRwMHiZH\/Fjg0OX16hyNHqktcL6Bpzi\nH55aU7jA8AMexjkVN24HmyHakv165wJBAIAP3I7avKjc2wjScC\/gwY4N1S9H7otd\nwRqIXGQhWeTO0lZyIJO7IOV4F7lWizW6gcal5ZXdUsWtqhe5zXQnyn0CQQCcaima\nUJxACpO0tCsyDveilTBDK6HjHGx5KRQEYuNukSKWfPbnPSGrEIjVBJo8AqHMyZAe\nwu1Q9+wTkBTG4MNd\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLsXIjhchYLKIwL03fi4ASmNHi\nmTiy4swwZfEpLaJaSNUqSyfNzw8DQYSgYiw6TrVDSzeDahxQ+muSgiRXGhsOuMMN\nhhBOhIFbCDTq8KECKI8KArBW\/d7zwLxksK8yITZ0Uhz9MnH6rkOJ26mA3KHTrzYI\nlYui22zora1XAX\/OXQIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 15:01:06.854  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMuxciOFyFgsojAv\nTd+LgBKY0eKZOLLizDBl8SktolpI1SpLJ83PDwNBhKBiLDpOtUNLN4NqHFD6a5KC\nJFcaGw64ww2GEE6EgVsINOrwoQIojwoCsFb93vPAvGSwrzIhNnRSHP0ycfquQ4nb\nqYDcodOvNgiVi6LbbOitrVcBf85dAgMBAAECgYBJAvK5nuOAD4eXI+2S2kru344j\n3e3/2OF925yEuRG/sOmPfl7nG3fzH9HtNyNJRxsb4uMkHK3HrOtQGYvzGK1nhsSA\nr2Cta5BET5SyxNTA0hKGlsSY6gWFpLON3HameDkuunAqUAD89EdHvupbcBDVXGTR\nKnwo8ghnUFcYGy8uNQJBAOdwTgK3LJV/LKR36Qc/pZkCu2UiO7w5caWm44QC82I0\n3cYQ4P7FtRMfQeswgYaeumHuUJtahXgiKh1DWOrBjeMCQQDhT1qcmvUY9SCEtDse\niLef5BetLjWZvVAJ9h+r+anqlxs1wn+Q6UGi5f0tqaFhq3cNl24N5wQaVp6EOdHG\nf+a/AkEAoX7RQL3W4365hQ6TUdaM1Ed+wiRwMHiZH/Fjg0OX16hyNHqktcL6Bpzi\nH55aU7jA8AMexjkVN24HmyHakv165wJBAIAP3I7avKjc2wjScC/gwY4N1S9H7otd\nwRqIXGQhWeTO0lZyIJO7IOV4F7lWizW6gcal5ZXdUsWtqhe5zXQnyn0CQQCcaima\nUJxACpO0tCsyDveilTBDK6HjHGx5KRQEYuNukSKWfPbnPSGrEIjVBJo8AqHMyZAe\nwu1Q9+wTkBTG4MNd\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLsXIjhchYLKIwL03fi4ASmNHi\nmTiy4swwZfEpLaJaSNUqSyfNzw8DQYSgYiw6TrVDSzeDahxQ+muSgiRXGhsOuMMN\nhhBOhIFbCDTq8KECKI8KArBW/d7zwLxksK8yITZ0Uhz9MnH6rkOJ26mA3KHTrzYI\nlYui22zora1XAX/OXQIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 15:01:06.857  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 15:01:08.252  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:01:08.253  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 15:01:08.254  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 15:01:08.254  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMuxciOFyFgsojAvTd+LgBKY0eKZOLLizDBl8SktolpI1SpLJ83PDwNBhKBiLDpOtUNLN4NqHFD6a5KCJFcaGw64ww2GEE6EgVsINOrwoQIojwoCsFb93vPAvGSwrzIhNnRSHP0ycfquQ4nbqYDcodOvNgiVi6LbbOitrVcBf85dAgMBAAECgYBJAvK5nuOAD4eXI+2S2kru344j3e3/2OF925yEuRG/sOmPfl7nG3fzH9HtNyNJRxsb4uMkHK3HrOtQGYvzGK1nhsSAr2Cta5BET5SyxNTA0hKGlsSY6gWFpLON3HameDkuunAqUAD89EdHvupbcBDVXGTRKnwo8ghnUFcYGy8uNQJBAOdwTgK3LJV/LKR36Qc/pZkCu2UiO7w5caWm44QC82I03cYQ4P7FtRMfQeswgYaeumHuUJtahXgiKh1DWOrBjeMCQQDhT1qcmvUY9SCEtDseiLef5BetLjWZvVAJ9h+r+anqlxs1wn+Q6UGi5f0tqaFhq3cNl24N5wQaVp6EOdHGf+a/AkEAoX7RQL3W4365hQ6TUdaM1Ed+wiRwMHiZH/Fjg0OX16hyNHqktcL6BpziH55aU7jA8AMexjkVN24HmyHakv165wJBAIAP3I7avKjc2wjScC/gwY4N1S9H7otdwRqIXGQhWeTO0lZyIJO7IOV4F7lWizW6gcal5ZXdUsWtqhe5zXQnyn0CQQCcaimaUJxACpO0tCsyDveilTBDK6HjHGx5KRQEYuNukSKWfPbnPSGrEIjVBJo8AqHMyZAewu1Q9+wTkBTG4MNd
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLsXIjhchYLKIwL03fi4ASmNHimTiy4swwZfEpLaJaSNUqSyfNzw8DQYSgYiw6TrVDSzeDahxQ+muSgiRXGhsOuMMNhhBOhIFbCDTq8KECKI8KArBW/d7zwLxksK8yITZ0Uhz9MnH6rkOJ26mA3KHTrzYIlYui22zora1XAX/OXQIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 15:01:08.255  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 15:01:08.255  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\Temp\daifu001\70153\checkOrderKey.txt
+2024-07-08 15:01:08.300  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 15:01:08.304  INFO 18800 --- [http-nio-5678-exec-2] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu001.zip
+2024-07-08 15:01:53.537  WARN 18800 --- [http-nio-5678-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.apache.commons.net.io.SocketInputStream] with preset Content-Type 'application/octet-stream']
+2024-07-08 15:03:22.268  INFO 8888 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 8888 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:03:22.271  INFO 8888 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:03:23.306  INFO 8888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:03:23.318  INFO 8888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:03:23.318  INFO 8888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:03:23.385  INFO 8888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:03:23.385  INFO 8888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1052 ms
+2024-07-08 15:03:23.734  INFO 8888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:03:23.744  INFO 8888 --- [main] com.bobwu.App                            : Started App in 1.982 seconds (JVM running for 2.373)
+2024-07-08 15:03:36.044  INFO 8888 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:03:36.044  INFO 8888 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:03:36.045  INFO 8888 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 15:03:36.119  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = Temp/daifu002/70153 ,filePath = Temp/daifu002/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/Temp/daifu002
+2024-07-08 15:03:36.120  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 15:03:36.258  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 15:03:37.053  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:03:37.054  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAN8KPJ6s7DLxEbjs\ne2cmcV++Falgve3bG7nCrscwLsmTE\/q5FfvuuuH5h1zGuDEXjFOpqly0BcOthrOS\nJDtGcZis4sK5ikMK+WpQd\/pkwrKNasERSpErmzSzT93C+eyG3EZkHET54QVXwnOo\nRGzroI2xKPnYz2W6X3Gj4RuNu0ulAgMBAAECgYADmcS0wxHlGKMymw668ZHu+8CZ\nxWgLiPf\/nbb4nDyFIIy4BXjnYkk+EKswwjyC\/mBTkW+go39cU1bTW06eblqzFo9y\nqraPYAwm3eRjk0SXhGsdKY4JjFxsN3IujmQWzNS85eQxbB6eePqCLnnQLJviFMl5\nhgMIepj2fpgk45\/bWQJBAPYu8JGWmd19fPtXklytx7FZIujSf3XZyJ50SBf3mFrs\nnV0xn0kKQBWnEiC4Jjw6KumWM4cTSdr9PtkVhSGJ9eMCQQDn7wwwXZ7eO9OsahfI\nKYlYSV8VyhIY9\/d8UqGgsL1yN9Tpnd48M4rMwg6J+AkfqIR+H4YUn+wNfgCSBUzr\nxS7XAkEAu\/SSj1UgHE7WwT7W7BNxxyF62a78yYmA9hlpgYLzu1ezvZdJOYat7toj\nqP9vkcQHR1f590LuvFdlSHB5uGWQaQJBAJ3xxqUxPD0vFMk3PpbK4oNDBAO8pnJm\nex0o0HSzp2+e4dlt7qekmgMyq9\/9D4mFoySYpyBof8H4ar8F6QouL+UCQQCC+DZm\n5VZuZkm+1y50ocYZm\/71I8Va4aGE7E3ZLhtptbcD3KlZSWz9ZF\/TOYz35MNJIF5q\ndoAQvMXQmeaCUyx2\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDfCjyerOwy8RG47HtnJnFfvhWp\nYL3t2xu5wq7HMC7JkxP6uRX77rrh+YdcxrgxF4xTqapctAXDrYazkiQ7RnGYrOLC\nuYpDCvlqUHf6ZMKyjWrBEUqRK5s0s0\/dwvnshtxGZBxE+eEFV8JzqERs66CNsSj5\n2M9lul9xo+EbjbtLpQIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 15:03:37.057  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAN8KPJ6s7DLxEbjs\ne2cmcV++Falgve3bG7nCrscwLsmTE/q5FfvuuuH5h1zGuDEXjFOpqly0BcOthrOS\nJDtGcZis4sK5ikMK+WpQd/pkwrKNasERSpErmzSzT93C+eyG3EZkHET54QVXwnOo\nRGzroI2xKPnYz2W6X3Gj4RuNu0ulAgMBAAECgYADmcS0wxHlGKMymw668ZHu+8CZ\nxWgLiPf/nbb4nDyFIIy4BXjnYkk+EKswwjyC/mBTkW+go39cU1bTW06eblqzFo9y\nqraPYAwm3eRjk0SXhGsdKY4JjFxsN3IujmQWzNS85eQxbB6eePqCLnnQLJviFMl5\nhgMIepj2fpgk45/bWQJBAPYu8JGWmd19fPtXklytx7FZIujSf3XZyJ50SBf3mFrs\nnV0xn0kKQBWnEiC4Jjw6KumWM4cTSdr9PtkVhSGJ9eMCQQDn7wwwXZ7eO9OsahfI\nKYlYSV8VyhIY9/d8UqGgsL1yN9Tpnd48M4rMwg6J+AkfqIR+H4YUn+wNfgCSBUzr\nxS7XAkEAu/SSj1UgHE7WwT7W7BNxxyF62a78yYmA9hlpgYLzu1ezvZdJOYat7toj\nqP9vkcQHR1f590LuvFdlSHB5uGWQaQJBAJ3xxqUxPD0vFMk3PpbK4oNDBAO8pnJm\nex0o0HSzp2+e4dlt7qekmgMyq9/9D4mFoySYpyBof8H4ar8F6QouL+UCQQCC+DZm\n5VZuZkm+1y50ocYZm/71I8Va4aGE7E3ZLhtptbcD3KlZSWz9ZF/TOYz35MNJIF5q\ndoAQvMXQmeaCUyx2\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDfCjyerOwy8RG47HtnJnFfvhWp\nYL3t2xu5wq7HMC7JkxP6uRX77rrh+YdcxrgxF4xTqapctAXDrYazkiQ7RnGYrOLC\nuYpDCvlqUHf6ZMKyjWrBEUqRK5s0s0/dwvnshtxGZBxE+eEFV8JzqERs66CNsSj5\n2M9lul9xo+EbjbtLpQIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 15:03:37.060  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 15:03:37.777  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:03:37.777  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 15:03:37.778  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 15:03:37.778  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAN8KPJ6s7DLxEbjse2cmcV++Falgve3bG7nCrscwLsmTE/q5FfvuuuH5h1zGuDEXjFOpqly0BcOthrOSJDtGcZis4sK5ikMK+WpQd/pkwrKNasERSpErmzSzT93C+eyG3EZkHET54QVXwnOoRGzroI2xKPnYz2W6X3Gj4RuNu0ulAgMBAAECgYADmcS0wxHlGKMymw668ZHu+8CZxWgLiPf/nbb4nDyFIIy4BXjnYkk+EKswwjyC/mBTkW+go39cU1bTW06eblqzFo9yqraPYAwm3eRjk0SXhGsdKY4JjFxsN3IujmQWzNS85eQxbB6eePqCLnnQLJviFMl5hgMIepj2fpgk45/bWQJBAPYu8JGWmd19fPtXklytx7FZIujSf3XZyJ50SBf3mFrsnV0xn0kKQBWnEiC4Jjw6KumWM4cTSdr9PtkVhSGJ9eMCQQDn7wwwXZ7eO9OsahfIKYlYSV8VyhIY9/d8UqGgsL1yN9Tpnd48M4rMwg6J+AkfqIR+H4YUn+wNfgCSBUzrxS7XAkEAu/SSj1UgHE7WwT7W7BNxxyF62a78yYmA9hlpgYLzu1ezvZdJOYat7tojqP9vkcQHR1f590LuvFdlSHB5uGWQaQJBAJ3xxqUxPD0vFMk3PpbK4oNDBAO8pnJmex0o0HSzp2+e4dlt7qekmgMyq9/9D4mFoySYpyBof8H4ar8F6QouL+UCQQCC+DZm5VZuZkm+1y50ocYZm/71I8Va4aGE7E3ZLhtptbcD3KlZSWz9ZF/TOYz35MNJIF5qdoAQvMXQmeaCUyx2
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDfCjyerOwy8RG47HtnJnFfvhWpYL3t2xu5wq7HMC7JkxP6uRX77rrh+YdcxrgxF4xTqapctAXDrYazkiQ7RnGYrOLCuYpDCvlqUHf6ZMKyjWrBEUqRK5s0s0/dwvnshtxGZBxE+eEFV8JzqERs66CNsSj52M9lul9xo+EbjbtLpQIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 15:03:37.779  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 15:03:37.779  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\Temp\daifu002\70153\checkOrderKey.txt
+2024-07-08 15:03:37.832  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 15:03:37.835  INFO 8888 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu002.zip
+2024-07-08 15:03:51.936  INFO 8888 --- [http-nio-5678-exec-3] com.bobwu.controller.HelloController     : 文件路径 = /user1/certs/daifu002.zip
+2024-07-08 15:03:51.945  WARN 8888 --- [http-nio-5678-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.apache.commons.net.io.SocketInputStream] with preset Content-Type 'application/octet-stream']
+2024-07-08 15:05:55.619  INFO 19048 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 19048 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:05:55.622  INFO 19048 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:05:56.699  INFO 19048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:05:56.710  INFO 19048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:05:56.710  INFO 19048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:05:56.783  INFO 19048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:05:56.783  INFO 19048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
+2024-07-08 15:05:57.143  INFO 19048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:05:57.152  INFO 19048 --- [main] com.bobwu.App                            : Started App in 2.086 seconds (JVM running for 2.49)
+2024-07-08 15:06:25.923  INFO 19048 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:06:25.923  INFO 19048 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:06:25.924  INFO 19048 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 15:06:25.995  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = Temp/daifu003/70153 ,filePath = Temp/daifu003/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/Temp/daifu003
+2024-07-08 15:06:25.996  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 15:06:26.128  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 15:06:26.902  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:06:26.903  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKuQgUZVX6e1MIM6\niMdmu1+PyCy4Fs0l\/mZ\/Sar0\/OHKmyFw1BZ8grdw4IJzJHcUwlSXORLkQtsVUzAV\npyaPrLIYz75OgmOVM7A28KCjjmsq83zXBd7JhZIrAwYqCXdZl89YSM0yWA+b4BXK\nIVZed1RPwfh3WPo6vdKLh2t06KTHAgMBAAECgYALJY5gpXdbjBgkzo7IddJCuTLG\nRQemOIu42RhONTCg8ur1V0FQXLKZfIn5r8V0vzKJEHIy2gXF+jK3cxCzHq6XoGWC\nCUPSLIW06jiyPdeBE3OSN7MI\/2Obfv3QwWBlvutYsdSttcvIMtvn4VVZ3\/Kg2dvP\nUB2vFjWo7s7cGfvQkQJBANvbEZk37oLf54+x0hWwicAyf3izDgRqyNQs8osE1CtY\nh40s0hvJqXxsprw5k0MSwOMCCRi0WzSdqa1Fgh5A51UCQQDHxQgq5feEFeRQVQYx\n5SkGbmbd08uxtXzT7oBe286hQVkJrIrAXySr49FW8JZrFaXK+0Pn5ux3tifgy4lV\nN6OrAkAV+fz1WuDtliIYfAbrAh2S57lUQFm7WU0\/4EpSWSY4Ov45v2w1OOBHPrkg\nAYVV5A8B4hc0r\/qZ9NScLGGIUqaNAkBOy77O\/OpGZUQrE35gC93EtaNJeBLuQ4G7\nLmXgBJ9aJ6ZxFGeePWj\/i9q0ii0qi91bVQSR4hn\/lg\/gsSe4PzwFAkBP51pmeusK\nJLr92eMNyc0cmnCHHEp\/xslvbvpiwWwd4jJKFHbxfO\/5XCe9t1mDfiI0bNsxFvyq\n4gnuUblm3Uud\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrkIFGVV+ntTCDOojHZrtfj8gs\nuBbNJf5mf0mq9PzhypshcNQWfIK3cOCCcyR3FMJUlzkS5ELbFVMwFacmj6yyGM++\nToJjlTOwNvCgo45rKvN81wXeyYWSKwMGKgl3WZfPWEjNMlgPm+AVyiFWXndUT8H4\nd1j6Or3Si4drdOikxwIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 15:06:26.906  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKuQgUZVX6e1MIM6\niMdmu1+PyCy4Fs0l/mZ/Sar0/OHKmyFw1BZ8grdw4IJzJHcUwlSXORLkQtsVUzAV\npyaPrLIYz75OgmOVM7A28KCjjmsq83zXBd7JhZIrAwYqCXdZl89YSM0yWA+b4BXK\nIVZed1RPwfh3WPo6vdKLh2t06KTHAgMBAAECgYALJY5gpXdbjBgkzo7IddJCuTLG\nRQemOIu42RhONTCg8ur1V0FQXLKZfIn5r8V0vzKJEHIy2gXF+jK3cxCzHq6XoGWC\nCUPSLIW06jiyPdeBE3OSN7MI/2Obfv3QwWBlvutYsdSttcvIMtvn4VVZ3/Kg2dvP\nUB2vFjWo7s7cGfvQkQJBANvbEZk37oLf54+x0hWwicAyf3izDgRqyNQs8osE1CtY\nh40s0hvJqXxsprw5k0MSwOMCCRi0WzSdqa1Fgh5A51UCQQDHxQgq5feEFeRQVQYx\n5SkGbmbd08uxtXzT7oBe286hQVkJrIrAXySr49FW8JZrFaXK+0Pn5ux3tifgy4lV\nN6OrAkAV+fz1WuDtliIYfAbrAh2S57lUQFm7WU0/4EpSWSY4Ov45v2w1OOBHPrkg\nAYVV5A8B4hc0r/qZ9NScLGGIUqaNAkBOy77O/OpGZUQrE35gC93EtaNJeBLuQ4G7\nLmXgBJ9aJ6ZxFGeePWj/i9q0ii0qi91bVQSR4hn/lg/gsSe4PzwFAkBP51pmeusK\nJLr92eMNyc0cmnCHHEp/xslvbvpiwWwd4jJKFHbxfO/5XCe9t1mDfiI0bNsxFvyq\n4gnuUblm3Uud\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrkIFGVV+ntTCDOojHZrtfj8gs\nuBbNJf5mf0mq9PzhypshcNQWfIK3cOCCcyR3FMJUlzkS5ELbFVMwFacmj6yyGM++\nToJjlTOwNvCgo45rKvN81wXeyYWSKwMGKgl3WZfPWEjNMlgPm+AVyiFWXndUT8H4\nd1j6Or3Si4drdOikxwIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 15:06:26.908  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 15:06:27.305  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:06:27.306  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 15:06:27.306  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 15:06:27.307  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKuQgUZVX6e1MIM6iMdmu1+PyCy4Fs0l/mZ/Sar0/OHKmyFw1BZ8grdw4IJzJHcUwlSXORLkQtsVUzAVpyaPrLIYz75OgmOVM7A28KCjjmsq83zXBd7JhZIrAwYqCXdZl89YSM0yWA+b4BXKIVZed1RPwfh3WPo6vdKLh2t06KTHAgMBAAECgYALJY5gpXdbjBgkzo7IddJCuTLGRQemOIu42RhONTCg8ur1V0FQXLKZfIn5r8V0vzKJEHIy2gXF+jK3cxCzHq6XoGWCCUPSLIW06jiyPdeBE3OSN7MI/2Obfv3QwWBlvutYsdSttcvIMtvn4VVZ3/Kg2dvPUB2vFjWo7s7cGfvQkQJBANvbEZk37oLf54+x0hWwicAyf3izDgRqyNQs8osE1CtYh40s0hvJqXxsprw5k0MSwOMCCRi0WzSdqa1Fgh5A51UCQQDHxQgq5feEFeRQVQYx5SkGbmbd08uxtXzT7oBe286hQVkJrIrAXySr49FW8JZrFaXK+0Pn5ux3tifgy4lVN6OrAkAV+fz1WuDtliIYfAbrAh2S57lUQFm7WU0/4EpSWSY4Ov45v2w1OOBHPrkgAYVV5A8B4hc0r/qZ9NScLGGIUqaNAkBOy77O/OpGZUQrE35gC93EtaNJeBLuQ4G7LmXgBJ9aJ6ZxFGeePWj/i9q0ii0qi91bVQSR4hn/lg/gsSe4PzwFAkBP51pmeusKJLr92eMNyc0cmnCHHEp/xslvbvpiwWwd4jJKFHbxfO/5XCe9t1mDfiI0bNsxFvyq4gnuUblm3Uud
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrkIFGVV+ntTCDOojHZrtfj8gsuBbNJf5mf0mq9PzhypshcNQWfIK3cOCCcyR3FMJUlzkS5ELbFVMwFacmj6yyGM++ToJjlTOwNvCgo45rKvN81wXeyYWSKwMGKgl3WZfPWEjNMlgPm+AVyiFWXndUT8H4d1j6Or3Si4drdOikxwIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 15:06:27.307  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 15:06:27.307  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\Temp\daifu003\70153\checkOrderKey.txt
+2024-07-08 15:06:27.354  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 15:06:27.361  INFO 19048 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu003.zip
+2024-07-08 15:06:33.703  INFO 19048 --- [http-nio-5678-exec-3] com.bobwu.controller.HelloController     : 文件路径 = /user1/certs/daifu003.zip
+2024-07-08 15:07:04.366  INFO 19048 --- [http-nio-5678-exec-4] com.bobwu.controller.HelloController     : 文件路径 = /user1/certs/daifu003.zip
+2024-07-08 15:22:00.291  INFO 13408 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 13408 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:22:00.293  INFO 13408 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:22:01.283  INFO 13408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:22:01.293  INFO 13408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:22:01.294  INFO 13408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:22:01.360  INFO 13408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:22:01.360  INFO 13408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1013 ms
+2024-07-08 15:22:01.420  WARN 13408 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'ftpClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.commons.net.ftp.FTPClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-07-08 15:22:01.423  INFO 13408 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-08 15:22:01.433  INFO 13408 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-08 15:22:01.463 ERROR 13408 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ftpClient in com.bobwu.controller.HelloController required a bean of type 'org.apache.commons.net.ftp.FTPClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.commons.net.ftp.FTPClient' in your configuration.
+
+2024-07-08 15:27:01.882  INFO 8908 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 8908 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:27:01.885  INFO 8908 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:27:02.786  INFO 8908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:27:02.794  INFO 8908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:27:02.795  INFO 8908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:27:02.860  INFO 8908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:27:02.861  INFO 8908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 922 ms
+2024-07-08 15:27:02.918  WARN 8908 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'ftpClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.commons.net.ftp.FTPClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-07-08 15:27:02.921  INFO 8908 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-08 15:27:02.931  INFO 8908 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-08 15:27:02.947 ERROR 8908 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ftpClient in com.bobwu.controller.HelloController required a bean of type 'org.apache.commons.net.ftp.FTPClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.commons.net.ftp.FTPClient' in your configuration.
+
+2024-07-08 15:28:08.674  INFO 3748 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 3748 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:28:08.677  INFO 3748 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:28:09.668  INFO 3748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:28:09.678  INFO 3748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:28:09.678  INFO 3748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:28:09.745  INFO 3748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:28:09.745  INFO 3748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1011 ms
+2024-07-08 15:28:09.803  WARN 3748 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'ftpClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.commons.net.ftp.FTPClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-07-08 15:28:09.806  INFO 3748 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-08 15:28:09.817  INFO 3748 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-08 15:28:09.835 ERROR 3748 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ftpClient in com.bobwu.controller.HelloController required a bean of type 'org.apache.commons.net.ftp.FTPClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.commons.net.ftp.FTPClient' in your configuration.
+
+2024-07-08 15:28:28.078  INFO 15152 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 15152 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:28:28.081  INFO 15152 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:28:29.036  INFO 15152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:28:29.046  INFO 15152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:28:29.047  INFO 15152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:28:29.115  INFO 15152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:28:29.115  INFO 15152 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 979 ms
+2024-07-08 15:28:29.178  WARN 15152 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'ftpClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.commons.net.ftp.FTPClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-07-08 15:28:29.181  INFO 15152 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-08 15:28:29.191  INFO 15152 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-08 15:28:29.208 ERROR 15152 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ftpClient in com.bobwu.controller.HelloController required a bean of type 'org.apache.commons.net.ftp.FTPClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.commons.net.ftp.FTPClient' in your configuration.
+
+2024-07-08 15:31:16.762  INFO 18784 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 18784 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:31:16.765  INFO 18784 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:31:17.736  INFO 18784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:31:17.746  INFO 18784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:31:17.746  INFO 18784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:31:17.811  INFO 18784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:31:17.811  INFO 18784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2024-07-08 15:31:18.162  INFO 18784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:31:18.172  INFO 18784 --- [main] com.bobwu.App                            : Started App in 1.898 seconds (JVM running for 2.274)
+2024-07-08 15:31:28.777  INFO 18784 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:31:28.777  INFO 18784 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:31:28.777  INFO 18784 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-08 15:31:28.821 ERROR 18784 --- [http-nio-5678-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:106) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:31:29.654 ERROR 18784 --- [http-nio-5678-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:106) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:33:07.543  INFO 14872 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 14872 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:33:07.547  INFO 14872 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:33:08.512  INFO 14872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:33:08.521  INFO 14872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:33:08.522  INFO 14872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:33:08.593  INFO 14872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:33:08.593  INFO 14872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
+2024-07-08 15:33:08.926  INFO 14872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:33:08.936  INFO 14872 --- [main] com.bobwu.App                            : Started App in 1.885 seconds (JVM running for 2.248)
+2024-07-08 15:33:24.891  INFO 14872 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:33:24.891  INFO 14872 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:33:24.891  INFO 14872 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-08 15:33:24.922 ERROR 14872 --- [http-nio-5678-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:108) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:33:25.116 ERROR 14872 --- [http-nio-5678-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:108) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:33:32.969 ERROR 14872 --- [http-nio-5678-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:108) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:33:33.107 ERROR 14872 --- [http-nio-5678-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.net.Socket.getInetAddress()" because "this._socket_" is null
+	at org.apache.commons.net.SocketClient.getRemoteAddress(SocketClient.java:683) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._openDataConnection_(FTPClient.java:765) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient._retrieveFile(FTPClient.java:971) ~[commons-net-3.8.0.jar:3.8.0]
+	at org.apache.commons.net.ftp.FTPClient.retrieveFile(FTPClient.java:3308) ~[commons-net-3.8.0.jar:3.8.0]
+	at com.bobwu.controller.HelloController.downloadFile(HelloController.java:108) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 15:34:32.689  INFO 15568 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 15568 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:34:32.692  INFO 15568 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:34:33.590  INFO 15568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:34:33.600  INFO 15568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:34:33.600  INFO 15568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:34:33.662  INFO 15568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:34:33.662  INFO 15568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 912 ms
+2024-07-08 15:34:34.000  INFO 15568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:34:34.010  INFO 15568 --- [main] com.bobwu.App                            : Started App in 1.777 seconds (JVM running for 2.129)
+2024-07-08 15:36:24.655  INFO 7932 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 7932 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:36:24.658  INFO 7932 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:36:25.626  INFO 7932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:36:25.636  INFO 7932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:36:25.636  INFO 7932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:36:25.703  INFO 7932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:36:25.704  INFO 7932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 988 ms
+2024-07-08 15:36:26.055  INFO 7932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:36:26.064  INFO 7932 --- [main] com.bobwu.App                            : Started App in 1.896 seconds (JVM running for 2.278)
+2024-07-08 15:36:44.635  INFO 8664 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 8664 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:36:44.638  INFO 8664 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:36:45.624  INFO 8664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:36:45.635  INFO 8664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:36:45.635  INFO 8664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:36:45.700  INFO 8664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:36:45.700  INFO 8664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
+2024-07-08 15:36:46.068  INFO 8664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:36:46.078  INFO 8664 --- [main] com.bobwu.App                            : Started App in 1.938 seconds (JVM running for 2.325)
+2024-07-08 15:36:50.476  INFO 8664 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:36:50.476  INFO 8664 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:36:50.477  INFO 8664 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 15:58:55.786  INFO 1424 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 1424 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 15:58:55.789  INFO 1424 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 15:58:56.834  INFO 1424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 15:58:56.847  INFO 1424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 15:58:56.847  INFO 1424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 15:58:56.924  INFO 1424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 15:58:56.924  INFO 1424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1079 ms
+2024-07-08 15:58:57.292  INFO 1424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 15:58:57.302  INFO 1424 --- [main] com.bobwu.App                            : Started App in 2.01 seconds (JVM running for 2.378)
+2024-07-08 15:59:08.355  INFO 1424 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 15:59:08.355  INFO 1424 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 15:59:08.356  INFO 1424 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 15:59:08.426  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = Temp/daifu004/70153 ,filePath = Temp/daifu004/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/Temp/daifu004
+2024-07-08 15:59:08.427  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 15:59:08.569  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 15:59:09.380  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:59:09.381  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALR4jo6pe+oSTqfc\nDJZNcgkkDJ19ZHBNEYz2Zlu8o9B1N5\/vXuOdLstCRSywTQaiI7HOcEcDCvEMw6CG\neNgzisFciJQdAhHiyNf4yZ\/oVfe\/DvYpfxT4dl4l+SOBy0dEDDcDpB6DuNUllNfT\nxWfwwBjsAPm+JNtAMoBb5DxU2n3RAgMBAAECgYEAswiSK\/b5Benpe97x4b2srmLD\n3Q0DMeFS0uux+bn3LRrL9u7pzJYnUN9Kbp3rm\/QHwyHQArKDDUUjYUFl6t2e\/K9S\nYnVvtlbwaeFYvYZVxHIjpsWngUSMZK6zeZ8ZjkleYNjafL80KyyqqxDuA\/YdPHiC\niUDu13NlZ43zoYPlVH0CQQDeMxYF8RKTU3uXFL51oyE0lCwqloUpOpLaHXZyN39w\n\/RVn6Xe\/ALkkLPcyi91PrL2qFf8Q\/2\/5h+SreIbNj0qHAkEAz+x4kwUXTaLmPYKY\nPKCAcVmMb1ENixFnzETayxMwvKXbJBXSt3g6nuCDaOjZhH7+u98q38RYVN+quKhJ\nWJlS5wJBAIQcr718pmS+QD+F7\/AVvAp9Bv2TXT00PFg\/KEukv7s4Xt\/XqoEANxRR\nP\/DnxAA5XtOgHHXIypT8vXNOSCg0SEUCQDMhP3VH5zccO+ocVztxbKRzFOm60M3F\n9fRxaixOB8ocLwtsomijlCbFpwsBV5wRbqrccjqcmewlJGJMX9z9tzkCQHpW7OIn\n\/2k6sPBsGAVxlB+mTHpfn2ahQfWlrWx3tc5TkN195S4wAtROvFe9i3K\/pEqYPAf1\nSX6vOt+vcSNWI6w=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0eI6OqXvqEk6n3AyWTXIJJAyd\nfWRwTRGM9mZbvKPQdTef717jnS7LQkUssE0GoiOxznBHAwrxDMOghnjYM4rBXIiU\nHQIR4sjX+Mmf6FX3vw72KX8U+HZeJfkjgctHRAw3A6Qeg7jVJZTX08Vn8MAY7AD5\nviTbQDKAW+Q8VNp90QIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 15:59:09.386  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALR4jo6pe+oSTqfc\nDJZNcgkkDJ19ZHBNEYz2Zlu8o9B1N5/vXuOdLstCRSywTQaiI7HOcEcDCvEMw6CG\neNgzisFciJQdAhHiyNf4yZ/oVfe/DvYpfxT4dl4l+SOBy0dEDDcDpB6DuNUllNfT\nxWfwwBjsAPm+JNtAMoBb5DxU2n3RAgMBAAECgYEAswiSK/b5Benpe97x4b2srmLD\n3Q0DMeFS0uux+bn3LRrL9u7pzJYnUN9Kbp3rm/QHwyHQArKDDUUjYUFl6t2e/K9S\nYnVvtlbwaeFYvYZVxHIjpsWngUSMZK6zeZ8ZjkleYNjafL80KyyqqxDuA/YdPHiC\niUDu13NlZ43zoYPlVH0CQQDeMxYF8RKTU3uXFL51oyE0lCwqloUpOpLaHXZyN39w\n/RVn6Xe/ALkkLPcyi91PrL2qFf8Q/2/5h+SreIbNj0qHAkEAz+x4kwUXTaLmPYKY\nPKCAcVmMb1ENixFnzETayxMwvKXbJBXSt3g6nuCDaOjZhH7+u98q38RYVN+quKhJ\nWJlS5wJBAIQcr718pmS+QD+F7/AVvAp9Bv2TXT00PFg/KEukv7s4Xt/XqoEANxRR\nP/DnxAA5XtOgHHXIypT8vXNOSCg0SEUCQDMhP3VH5zccO+ocVztxbKRzFOm60M3F\n9fRxaixOB8ocLwtsomijlCbFpwsBV5wRbqrccjqcmewlJGJMX9z9tzkCQHpW7OIn\n/2k6sPBsGAVxlB+mTHpfn2ahQfWlrWx3tc5TkN195S4wAtROvFe9i3K/pEqYPAf1\nSX6vOt+vcSNWI6w=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0eI6OqXvqEk6n3AyWTXIJJAyd\nfWRwTRGM9mZbvKPQdTef717jnS7LQkUssE0GoiOxznBHAwrxDMOghnjYM4rBXIiU\nHQIR4sjX+Mmf6FX3vw72KX8U+HZeJfkjgctHRAw3A6Qeg7jVJZTX08Vn8MAY7AD5\nviTbQDKAW+Q8VNp90QIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 15:59:09.389  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 15:59:09.894  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 15:59:09.894  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 15:59:09.895  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 15:59:09.895  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALR4jo6pe+oSTqfcDJZNcgkkDJ19ZHBNEYz2Zlu8o9B1N5/vXuOdLstCRSywTQaiI7HOcEcDCvEMw6CGeNgzisFciJQdAhHiyNf4yZ/oVfe/DvYpfxT4dl4l+SOBy0dEDDcDpB6DuNUllNfTxWfwwBjsAPm+JNtAMoBb5DxU2n3RAgMBAAECgYEAswiSK/b5Benpe97x4b2srmLD3Q0DMeFS0uux+bn3LRrL9u7pzJYnUN9Kbp3rm/QHwyHQArKDDUUjYUFl6t2e/K9SYnVvtlbwaeFYvYZVxHIjpsWngUSMZK6zeZ8ZjkleYNjafL80KyyqqxDuA/YdPHiCiUDu13NlZ43zoYPlVH0CQQDeMxYF8RKTU3uXFL51oyE0lCwqloUpOpLaHXZyN39w/RVn6Xe/ALkkLPcyi91PrL2qFf8Q/2/5h+SreIbNj0qHAkEAz+x4kwUXTaLmPYKYPKCAcVmMb1ENixFnzETayxMwvKXbJBXSt3g6nuCDaOjZhH7+u98q38RYVN+quKhJWJlS5wJBAIQcr718pmS+QD+F7/AVvAp9Bv2TXT00PFg/KEukv7s4Xt/XqoEANxRRP/DnxAA5XtOgHHXIypT8vXNOSCg0SEUCQDMhP3VH5zccO+ocVztxbKRzFOm60M3F9fRxaixOB8ocLwtsomijlCbFpwsBV5wRbqrccjqcmewlJGJMX9z9tzkCQHpW7OIn/2k6sPBsGAVxlB+mTHpfn2ahQfWlrWx3tc5TkN195S4wAtROvFe9i3K/pEqYPAf1SX6vOt+vcSNWI6w=
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0eI6OqXvqEk6n3AyWTXIJJAydfWRwTRGM9mZbvKPQdTef717jnS7LQkUssE0GoiOxznBHAwrxDMOghnjYM4rBXIiUHQIR4sjX+Mmf6FX3vw72KX8U+HZeJfkjgctHRAw3A6Qeg7jVJZTX08Vn8MAY7AD5viTbQDKAW+Q8VNp90QIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 15:59:09.896  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 15:59:09.896  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\Temp\daifu004\70153\checkOrderKey.txt
+2024-07-08 15:59:09.933  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 15:59:09.936  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu004.zip
+2024-07-08 15:59:09.940  INFO 1424 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : Public URL = https://b7eb-2001-b400-e450-e110-4474-5d24-6ac8-a246.ngrok-free.app 
+2024-07-08 16:05:54.518  INFO 18388 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 18388 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 16:05:54.521  INFO 18388 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 16:05:55.480  INFO 18388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 16:05:55.489  INFO 18388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 16:05:55.490  INFO 18388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 16:05:55.556  INFO 18388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 16:05:55.556  INFO 18388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms
+2024-07-08 16:05:55.897  INFO 18388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 16:05:55.907  INFO 18388 --- [main] com.bobwu.App                            : Started App in 1.861 seconds (JVM running for 2.223)
+2024-07-08 16:06:24.628  INFO 18388 --- [http-nio-5678-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 16:06:24.628  INFO 18388 --- [http-nio-5678-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 16:06:24.629  INFO 18388 --- [http-nio-5678-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 16:06:24.695  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = Temp/daifu005/70153 ,filePath = Temp/daifu005/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/remitCerts/temp/daifu005
+2024-07-08 16:06:24.696  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 16:06:24.817  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 16:06:25.531  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:06:25.534  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZst99t2EFec1qD\nC\/9xHe80fCDlnXk5HHfleTf7sWs9V0FKJnFglte6YlPPoYknsXld\/hsAu09gHRF5\nk6cERt0FHgVbskYLlWVpcoDK2Qqg0ztf3+sVedUlhWV3DAfH0KkjGVz\/tB743yJW\nIYYgYGxfLwsVBbcbJB+QlfDIFtsPAgMBAAECgYABt6pPfzA\/BU2et4cgY4c9nkfg\n42iFIKWE93MZtNPpx40Pv0v3W0pwQ3\/zfAvwR6BjHSBsTqh0ydncNUHPm7mzDOZq\nKA4QfRAsVYjujVDBcwYReJbiNu30G3voz76m3zUYujM+LtuNalLy4+X0rJXxGGIa\nT4bMVj2qzTxzN0ROAQJBAPD26E\/haJYCNZ7v1j5XPqpwfndsRifOHWbDT0pfvG6T\nk6lr2uokLCiuyrti1FkMQE5sSLFqj2umBJB2vFWghA8CQQDBzrbIgjivzYY2sRmk\ncbZ6hwt33RzqSB+0yxeQDzPBzyjaXUV3LRYhxnN3ipfUWbLG0xFgPdtTYXV9vES\/\nATkBAkEA09Rq45ZHx9\/HXaJ\/2CwAVfsw4jFX9zQ2GpnGAZ7p2td3bu\/28fC8tUL7\nzAGUpXekrIx61yTTUhIPXyRSaoACtwJBAJBgpD4e9IfS\/ecEa+vbYmtI6zwyFnZZ\noHUYzsbc7Fu3LeHule9AQTqMEjy9nHnvEIWZe1pM+nTVJ6exdy0rhgECQB2Cim8k\nRuynDJzxGrtrYQZiLCAFpLMlIp8psm1Lzuv3DJN8XRU8q2UBgfCxsdoVmxsXMyF5\nq8C+kR5YYCE6Z+c=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2bLffbdhBXnNagwv\/cR3vNHwg\n5Z15ORx35Xk3+7FrPVdBSiZxYJbXumJTz6GJJ7F5Xf4bALtPYB0ReZOnBEbdBR4F\nW7JGC5VlaXKAytkKoNM7X9\/rFXnVJYVldwwHx9CpIxlc\/7Qe+N8iViGGIGBsXy8L\nFQW3GyQfkJXwyBbbDwIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 16:06:25.537  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZst99t2EFec1qD\nC/9xHe80fCDlnXk5HHfleTf7sWs9V0FKJnFglte6YlPPoYknsXld/hsAu09gHRF5\nk6cERt0FHgVbskYLlWVpcoDK2Qqg0ztf3+sVedUlhWV3DAfH0KkjGVz/tB743yJW\nIYYgYGxfLwsVBbcbJB+QlfDIFtsPAgMBAAECgYABt6pPfzA/BU2et4cgY4c9nkfg\n42iFIKWE93MZtNPpx40Pv0v3W0pwQ3/zfAvwR6BjHSBsTqh0ydncNUHPm7mzDOZq\nKA4QfRAsVYjujVDBcwYReJbiNu30G3voz76m3zUYujM+LtuNalLy4+X0rJXxGGIa\nT4bMVj2qzTxzN0ROAQJBAPD26E/haJYCNZ7v1j5XPqpwfndsRifOHWbDT0pfvG6T\nk6lr2uokLCiuyrti1FkMQE5sSLFqj2umBJB2vFWghA8CQQDBzrbIgjivzYY2sRmk\ncbZ6hwt33RzqSB+0yxeQDzPBzyjaXUV3LRYhxnN3ipfUWbLG0xFgPdtTYXV9vES/\nATkBAkEA09Rq45ZHx9/HXaJ/2CwAVfsw4jFX9zQ2GpnGAZ7p2td3bu/28fC8tUL7\nzAGUpXekrIx61yTTUhIPXyRSaoACtwJBAJBgpD4e9IfS/ecEa+vbYmtI6zwyFnZZ\noHUYzsbc7Fu3LeHule9AQTqMEjy9nHnvEIWZe1pM+nTVJ6exdy0rhgECQB2Cim8k\nRuynDJzxGrtrYQZiLCAFpLMlIp8psm1Lzuv3DJN8XRU8q2UBgfCxsdoVmxsXMyF5\nq8C+kR5YYCE6Z+c=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2bLffbdhBXnNagwv/cR3vNHwg\n5Z15ORx35Xk3+7FrPVdBSiZxYJbXumJTz6GJJ7F5Xf4bALtPYB0ReZOnBEbdBR4F\nW7JGC5VlaXKAytkKoNM7X9/rFXnVJYVldwwHx9CpIxlc/7Qe+N8iViGGIGBsXy8L\nFQW3GyQfkJXwyBbbDwIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 16:06:25.540  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 16:06:25.926  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:06:25.926  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 16:06:25.927  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 16:06:25.927  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZst99t2EFec1qDC/9xHe80fCDlnXk5HHfleTf7sWs9V0FKJnFglte6YlPPoYknsXld/hsAu09gHRF5k6cERt0FHgVbskYLlWVpcoDK2Qqg0ztf3+sVedUlhWV3DAfH0KkjGVz/tB743yJWIYYgYGxfLwsVBbcbJB+QlfDIFtsPAgMBAAECgYABt6pPfzA/BU2et4cgY4c9nkfg42iFIKWE93MZtNPpx40Pv0v3W0pwQ3/zfAvwR6BjHSBsTqh0ydncNUHPm7mzDOZqKA4QfRAsVYjujVDBcwYReJbiNu30G3voz76m3zUYujM+LtuNalLy4+X0rJXxGGIaT4bMVj2qzTxzN0ROAQJBAPD26E/haJYCNZ7v1j5XPqpwfndsRifOHWbDT0pfvG6Tk6lr2uokLCiuyrti1FkMQE5sSLFqj2umBJB2vFWghA8CQQDBzrbIgjivzYY2sRmkcbZ6hwt33RzqSB+0yxeQDzPBzyjaXUV3LRYhxnN3ipfUWbLG0xFgPdtTYXV9vES/ATkBAkEA09Rq45ZHx9/HXaJ/2CwAVfsw4jFX9zQ2GpnGAZ7p2td3bu/28fC8tUL7zAGUpXekrIx61yTTUhIPXyRSaoACtwJBAJBgpD4e9IfS/ecEa+vbYmtI6zwyFnZZoHUYzsbc7Fu3LeHule9AQTqMEjy9nHnvEIWZe1pM+nTVJ6exdy0rhgECQB2Cim8kRuynDJzxGrtrYQZiLCAFpLMlIp8psm1Lzuv3DJN8XRU8q2UBgfCxsdoVmxsXMyF5q8C+kR5YYCE6Z+c=
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2bLffbdhBXnNagwv/cR3vNHwg5Z15ORx35Xk3+7FrPVdBSiZxYJbXumJTz6GJJ7F5Xf4bALtPYB0ReZOnBEbdBR4FW7JGC5VlaXKAytkKoNM7X9/rFXnVJYVldwwHx9CpIxlc/7Qe+N8iViGGIGBsXy8LFQW3GyQfkJXwyBbbDwIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 16:06:25.935  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 16:06:25.936  INFO 18388 --- [http-nio-5678-exec-2] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\Temp\daifu005\70153\checkOrderKey.txt
+2024-07-08 16:06:25.945 ERROR 18388 --- [http-nio-5678-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.nio.file.NoSuchFileException: D:\workspace\remitCerts\temp\daifu005
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[na:na]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[na:na]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[na:na]
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53) ~[na:na]
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38) ~[na:na]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:199) ~[na:na]
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851) ~[na:na]
+	at java.base/java.nio.file.FileTreeWalker.getAttributes(FileTreeWalker.java:220) ~[na:na]
+	at java.base/java.nio.file.FileTreeWalker.visit(FileTreeWalker.java:277) ~[na:na]
+	at java.base/java.nio.file.FileTreeWalker.walk(FileTreeWalker.java:323) ~[na:na]
+	at java.base/java.nio.file.FileTreeIterator.<init>(FileTreeIterator.java:71) ~[na:na]
+	at java.base/java.nio.file.Files.walk(Files.java:3919) ~[na:na]
+	at java.base/java.nio.file.Files.walk(Files.java:3974) ~[na:na]
+	at com.bobwu.util.FileUtils.zipDirectory(FileUtils.java:39) ~[classes/:na]
+	at com.bobwu.controller.HelloController.getDaifuRSAFile(HelloController.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-08 16:08:01.261  INFO 9776 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 9776 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 16:08:01.264  INFO 9776 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 16:08:02.241  INFO 9776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 16:08:02.251  INFO 9776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 16:08:02.251  INFO 9776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 16:08:02.329  INFO 9776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 16:08:02.329  INFO 9776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1007 ms
+2024-07-08 16:08:02.663  INFO 9776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 16:08:02.672  INFO 9776 --- [main] com.bobwu.App                            : Started App in 1.908 seconds (JVM running for 2.301)
+2024-07-08 16:09:23.404  INFO 14140 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 14140 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 16:09:23.406  INFO 14140 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 16:09:24.363  INFO 14140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 16:09:24.373  INFO 14140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 16:09:24.373  INFO 14140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 16:09:24.436  INFO 14140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 16:09:24.436  INFO 14140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 974 ms
+2024-07-08 16:09:24.770  INFO 14140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 16:09:24.780  INFO 14140 --- [main] com.bobwu.App                            : Started App in 1.87 seconds (JVM running for 2.25)
+2024-07-08 16:09:30.274  INFO 14140 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 16:09:30.274  INFO 14140 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 16:09:30.275  INFO 14140 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-08 16:09:30.342  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = remitCerts/temp/daifu005/70153 ,filePath = remitCerts/temp/daifu005/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/remitCerts/temp/daifu005
+2024-07-08 16:09:30.343  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 16:09:30.464  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 16:09:31.139  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:09:31.140  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOYhw08VumjPWlVI\nkjXd9ZKxUSLAMQgOaZEMTATl4fhKwlESX3hMTy2fAafuQa2f5iSotNqNlYTgiGys\nw7QryxdEDb0AgVK5tAGOVIjJ1dM2FR0Ue0891nUaLuN7dVvlp7ljOd4qB3q1hCR\/\nKKgELvh38eqdDBGsREk3cNihVOA7AgMBAAECgYEAgHbIeBVBAdD+NC1WsQs+Uqz5\nBdUTidPByl568SECi3\/wCSGgeZ7fdDAW1I+DylBAQKaMjpQKqypL\/Z5TgPgRXdQs\nSKETO9AeW34lcpCBk+yWTLXPJloF\/4DR4CPxL4UY1Li7rwfZtX6y3mjyQl65z4gA\n1HC8eQv+15l4E6+cKEECQQD+iFZr3Y4wR6RfcfudPdZATVizMY8j3AW2D9eZXRC9\n5q4\/3BNqiTaQLngDCaoGACuvMouty8cuic4sbV+rNGt9AkEA53Vpnz\/Ae5SzawBw\nsb4xJaDZ9bjX1EB01FphGeX\/pjZPes4z95StVLEcTsWfqI8ZWmgtfhuOHNOXQVEx\nlpGYFwJAAuC9wWh25BrbQ+0BAE0jsARv3U7RJIGnWuCg+m3v84W5MKWnXowAnu63\nkqk4T+sOk2OJ6sQkE2WhfCUccM4d7QJAMr2DlRyltrHHj1p+WgjGv2f+wCZwciBb\nPD4\/8SyBmc9oJxTTQaA\/S0S0XvRl5s7QEQiriGzD\/7\/G9dO12js6qwJAb1AQ7DxR\n9MAnGvk2hB7KJR4UmiGL8ITWE\/tVX+gwA0Z3J2i7m9FIZ7VHpb7QI6cE4A9G31XE\nXdQzGiMZu9JBcQ==\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmIcNPFbpoz1pVSJI13fWSsVEi\nwDEIDmmRDEwE5eH4SsJREl94TE8tnwGn7kGtn+YkqLTajZWE4IhsrMO0K8sXRA29\nAIFSubQBjlSIydXTNhUdFHtPPdZ1Gi7je3Vb5ae5YzneKgd6tYQkfyioBC74d\/Hq\nnQwRrERJN3DYoVTgOwIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 16:09:31.147  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOYhw08VumjPWlVI\nkjXd9ZKxUSLAMQgOaZEMTATl4fhKwlESX3hMTy2fAafuQa2f5iSotNqNlYTgiGys\nw7QryxdEDb0AgVK5tAGOVIjJ1dM2FR0Ue0891nUaLuN7dVvlp7ljOd4qB3q1hCR/\nKKgELvh38eqdDBGsREk3cNihVOA7AgMBAAECgYEAgHbIeBVBAdD+NC1WsQs+Uqz5\nBdUTidPByl568SECi3/wCSGgeZ7fdDAW1I+DylBAQKaMjpQKqypL/Z5TgPgRXdQs\nSKETO9AeW34lcpCBk+yWTLXPJloF/4DR4CPxL4UY1Li7rwfZtX6y3mjyQl65z4gA\n1HC8eQv+15l4E6+cKEECQQD+iFZr3Y4wR6RfcfudPdZATVizMY8j3AW2D9eZXRC9\n5q4/3BNqiTaQLngDCaoGACuvMouty8cuic4sbV+rNGt9AkEA53Vpnz/Ae5SzawBw\nsb4xJaDZ9bjX1EB01FphGeX/pjZPes4z95StVLEcTsWfqI8ZWmgtfhuOHNOXQVEx\nlpGYFwJAAuC9wWh25BrbQ+0BAE0jsARv3U7RJIGnWuCg+m3v84W5MKWnXowAnu63\nkqk4T+sOk2OJ6sQkE2WhfCUccM4d7QJAMr2DlRyltrHHj1p+WgjGv2f+wCZwciBb\nPD4/8SyBmc9oJxTTQaA/S0S0XvRl5s7QEQiriGzD/7/G9dO12js6qwJAb1AQ7DxR\n9MAnGvk2hB7KJR4UmiGL8ITWE/tVX+gwA0Z3J2i7m9FIZ7VHpb7QI6cE4A9G31XE\nXdQzGiMZu9JBcQ==\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmIcNPFbpoz1pVSJI13fWSsVEi\nwDEIDmmRDEwE5eH4SsJREl94TE8tnwGn7kGtn+YkqLTajZWE4IhsrMO0K8sXRA29\nAIFSubQBjlSIydXTNhUdFHtPPdZ1Gi7je3Vb5ae5YzneKgd6tYQkfyioBC74d/Hq\nnQwRrERJN3DYoVTgOwIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 16:09:31.149  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 16:09:31.724  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:09:31.724  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 16:09:31.725  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 16:09:31.725  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOYhw08VumjPWlVIkjXd9ZKxUSLAMQgOaZEMTATl4fhKwlESX3hMTy2fAafuQa2f5iSotNqNlYTgiGysw7QryxdEDb0AgVK5tAGOVIjJ1dM2FR0Ue0891nUaLuN7dVvlp7ljOd4qB3q1hCR/KKgELvh38eqdDBGsREk3cNihVOA7AgMBAAECgYEAgHbIeBVBAdD+NC1WsQs+Uqz5BdUTidPByl568SECi3/wCSGgeZ7fdDAW1I+DylBAQKaMjpQKqypL/Z5TgPgRXdQsSKETO9AeW34lcpCBk+yWTLXPJloF/4DR4CPxL4UY1Li7rwfZtX6y3mjyQl65z4gA1HC8eQv+15l4E6+cKEECQQD+iFZr3Y4wR6RfcfudPdZATVizMY8j3AW2D9eZXRC95q4/3BNqiTaQLngDCaoGACuvMouty8cuic4sbV+rNGt9AkEA53Vpnz/Ae5SzawBwsb4xJaDZ9bjX1EB01FphGeX/pjZPes4z95StVLEcTsWfqI8ZWmgtfhuOHNOXQVExlpGYFwJAAuC9wWh25BrbQ+0BAE0jsARv3U7RJIGnWuCg+m3v84W5MKWnXowAnu63kqk4T+sOk2OJ6sQkE2WhfCUccM4d7QJAMr2DlRyltrHHj1p+WgjGv2f+wCZwciBbPD4/8SyBmc9oJxTTQaA/S0S0XvRl5s7QEQiriGzD/7/G9dO12js6qwJAb1AQ7DxR9MAnGvk2hB7KJR4UmiGL8ITWE/tVX+gwA0Z3J2i7m9FIZ7VHpb7QI6cE4A9G31XEXdQzGiMZu9JBcQ==
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmIcNPFbpoz1pVSJI13fWSsVEiwDEIDmmRDEwE5eH4SsJREl94TE8tnwGn7kGtn+YkqLTajZWE4IhsrMO0K8sXRA29AIFSubQBjlSIydXTNhUdFHtPPdZ1Gi7je3Vb5ae5YzneKgd6tYQkfyioBC74d/HqnQwRrERJN3DYoVTgOwIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 16:09:31.737  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 16:09:31.738  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\remitCerts\temp\daifu005\70153\checkOrderKey.txt
+2024-07-08 16:09:31.776  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 16:09:31.780  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu005.zip
+2024-07-08 16:09:31.784  INFO 14140 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : Public URL = https://b7eb-2001-b400-e450-e110-4474-5d24-6ac8-a246.ngrok-free.app 
+2024-07-08 16:17:02.321  INFO 10948 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 10948 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 16:17:02.324  INFO 10948 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 16:17:03.397  INFO 10948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 16:17:03.409  INFO 10948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 16:17:03.410  INFO 10948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 16:17:03.486  INFO 10948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 16:17:03.486  INFO 10948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1098 ms
+2024-07-08 16:17:03.840  INFO 10948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 16:17:03.850  INFO 10948 --- [main] com.bobwu.App                            : Started App in 2.033 seconds (JVM running for 2.4)
+2024-07-08 16:17:16.456  INFO 7304 --- [main] com.bobwu.App                            : Starting App using Java 18.0.2 on DESKTOP-1RIJ0TK with PID 7304 (D:\workspace\remitCerts\target\classes started by e368- in D:\workspace)
+2024-07-08 16:17:16.459  INFO 7304 --- [main] com.bobwu.App                            : No active profile set, falling back to 1 default profile: "default"
+2024-07-08 16:17:17.475  INFO 7304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5678 (http)
+2024-07-08 16:17:17.486  INFO 7304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-08 16:17:17.486  INFO 7304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-07-08 16:17:17.554  INFO 7304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-08 16:17:17.554  INFO 7304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
+2024-07-08 16:17:17.899  INFO 7304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5678 (http) with context path ''
+2024-07-08 16:17:17.909  INFO 7304 --- [main] com.bobwu.App                            : Started App in 1.967 seconds (JVM running for 2.42)
+2024-07-08 16:31:37.416  INFO 7304 --- [http-nio-5678-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-08 16:31:37.416  INFO 7304 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-08 16:31:37.417  INFO 7304 --- [http-nio-5678-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-08 16:31:37.481  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : currentDir = D:\workspace ,directoryPath = remitCerts/temp/daifu006/70153 ,filePath = remitCerts/temp/daifu006/70153/checkOrderKey.txt ,zipFilePath = D:\workspace/remitCerts/temp/daifu006
+2024-07-08 16:31:37.482  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 密钥长度 = null ,密钥格式 = null
+2024-07-08 16:31:37.595  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = rsaLength=1024&rsaFormat=PKCS#1
+2024-07-08 16:31:38.306  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:31:38.308  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZwOfrwrEGG3PpR\n+2hA4AQ5ei0I8W\/9WxNiEaAIS7Fr45jZZR4VGSzgUZbyetedJCjWjGNnz3aXn5l1\nDRJGjytqKtah2fwu5sStYEY5Sa02M4LEgMH6q9UdLy0tPJc6KxTp+TwLxOJXeCM7\ncouovQHnwOb5CGR0FICvyPBXkDNPAgMBAAECgYAWtbWh9R+cMIuFZXskKR85p2X8\nASb8x870hLqo7x9tAH8eYcFik0HFAk9luN1txZPguYRUQ3Hh01H8qkNsSPg9O1wS\nG\/n\/XODDXDJNsW6KtklxzinWPdQcTmyFSBMacTyLwXoK2UqioKRqHCz9D\/1wTkJ+\nWFZ8odeCjdEzl3bQYQJBAOXcwmv1cqa2fFfVSlM+G9lZiZZpAjBxlaEIW7MC1W4h\n0M086rL5gdUY8OkXgjSeytk5e+zfbOJvQ5fZPvMLDHkCQQDLLvdm58I9b9n4mu25\nGe96N+xDgVzDsHwINQLp\/W2P0WDLBx43zHJLDBP9Z\/1PYy33SFMsJErXflCSA1sD\narwHAkAHnU+HegMJSMRHuJYUudr8UT4AkIv1BN47DmbTQEXHtzEOi3UO5rsJTyEz\n54Z1rcj0dzYGu8QEoEDx981hCb2pAkEAshb5jL4I19bJJAmP4lVkPSj1MnoZuABh\nxsPISRXzyUIJaAtWJixR5YuxncRfGA1jhcJj\/GXXH6i8sC62wHj2UwJBAMqGr+od\npTKCePlGAaShQXSySM1JHy+k\/OzYIXYl7Vq4ftwoTkNnffiGexij410xxL3eiton\nqlUnPLUTGKd2ANQ=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2cDn68KxBhtz6UftoQOAEOXot\nCPFv\/VsTYhGgCEuxa+OY2WUeFRks4FGW8nrXnSQo1oxjZ892l5+ZdQ0SRo8rairW\nodn8LubErWBGOUmtNjOCxIDB+qvVHS8tLTyXOisU6fk8C8TiV3gjO3KLqL0B58Dm\n+QhkdBSAr8jwV5AzTwIDAQAB\n-----END PUBLIC KEY-----\n"},"msg":"\u83b7\u53d6\u6210\u529f"}
+2024-07-08 16:31:38.313  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.bejson.com/Bejson/Api/Rsa/getRsaKey ,data = {"msg":"获取成功","code":200,"data":{"private":"-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZwOfrwrEGG3PpR\n+2hA4AQ5ei0I8W/9WxNiEaAIS7Fr45jZZR4VGSzgUZbyetedJCjWjGNnz3aXn5l1\nDRJGjytqKtah2fwu5sStYEY5Sa02M4LEgMH6q9UdLy0tPJc6KxTp+TwLxOJXeCM7\ncouovQHnwOb5CGR0FICvyPBXkDNPAgMBAAECgYAWtbWh9R+cMIuFZXskKR85p2X8\nASb8x870hLqo7x9tAH8eYcFik0HFAk9luN1txZPguYRUQ3Hh01H8qkNsSPg9O1wS\nG/n/XODDXDJNsW6KtklxzinWPdQcTmyFSBMacTyLwXoK2UqioKRqHCz9D/1wTkJ+\nWFZ8odeCjdEzl3bQYQJBAOXcwmv1cqa2fFfVSlM+G9lZiZZpAjBxlaEIW7MC1W4h\n0M086rL5gdUY8OkXgjSeytk5e+zfbOJvQ5fZPvMLDHkCQQDLLvdm58I9b9n4mu25\nGe96N+xDgVzDsHwINQLp/W2P0WDLBx43zHJLDBP9Z/1PYy33SFMsJErXflCSA1sD\narwHAkAHnU+HegMJSMRHuJYUudr8UT4AkIv1BN47DmbTQEXHtzEOi3UO5rsJTyEz\n54Z1rcj0dzYGu8QEoEDx981hCb2pAkEAshb5jL4I19bJJAmP4lVkPSj1MnoZuABh\nxsPISRXzyUIJaAtWJixR5YuxncRfGA1jhcJj/GXXH6i8sC62wHj2UwJBAMqGr+od\npTKCePlGAaShQXSySM1JHy+k/OzYIXYl7Vq4ftwoTkNnffiGexij410xxL3eiton\nqlUnPLUTGKd2ANQ=\n-----END PRIVATE KEY-----\n","public":"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2cDn68KxBhtz6UftoQOAEOXot\nCPFv/VsTYhGgCEuxa+OY2WUeFRks4FGW8nrXnSQo1oxjZ892l5+ZdQ0SRo8rairW\nodn8LubErWBGOUmtNjOCxIDB+qvVHS8tLTyXOisU6fk8C8TiV3gjO3KLqL0B58Dm\n+QhkdBSAr8jwV5AzTwIDAQAB\n-----END PUBLIC KEY-----\n"}}
+2024-07-08 16:31:38.315  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 请求参数 = str=70153
+2024-07-08 16:31:39.191  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应代码 = 200
+2024-07-08 16:31:39.192  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : 响应内容 = {"status":1,"info":"\u67e5\u8be2\u6210\u529f\uff01","data":[{"name":"16\u4f4d\u5c0f\u5199","value":"f4c44caeede3e10f"},{"name":"16\u4f4d\u5927\u5199","value":"F4C44CAEEDE3E10F"},{"name":"32\u4f4d\u5c0f\u5199","value":"df84bf8cf4c44caeede3e10fcbe023ab"},{"name":"32\u4f4d\u5927\u5199","value":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}]}
+2024-07-08 16:31:39.193  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.APIUtils                  : gateway = https://www.iamwawa.cn/home/md5/ajax ,data = {"16位小写":"f4c44caeede3e10f","32位小写":"df84bf8cf4c44caeede3e10fcbe023ab","16位大写":"F4C44CAEEDE3E10F","32位大写":"DF84BF8CF4C44CAEEDE3E10FCBE023AB"}
+2024-07-08 16:31:39.194  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.service.HelloService           : 服务器资料 = rsaThirdPubKey=qwmkdm1no123no21nflm334jvio34j53p5ki2-0v5ik1kv124vk12[p4k124njhiot3cn4pctn43ptcm34octm34pojbp3op5jnp2ojn1[23por[ewr23r424365r42365r4236
+rsaPrivateKey=MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZwOfrwrEGG3PpR+2hA4AQ5ei0I8W/9WxNiEaAIS7Fr45jZZR4VGSzgUZbyetedJCjWjGNnz3aXn5l1DRJGjytqKtah2fwu5sStYEY5Sa02M4LEgMH6q9UdLy0tPJc6KxTp+TwLxOJXeCM7couovQHnwOb5CGR0FICvyPBXkDNPAgMBAAECgYAWtbWh9R+cMIuFZXskKR85p2X8ASb8x870hLqo7x9tAH8eYcFik0HFAk9luN1txZPguYRUQ3Hh01H8qkNsSPg9O1wSG/n/XODDXDJNsW6KtklxzinWPdQcTmyFSBMacTyLwXoK2UqioKRqHCz9D/1wTkJ+WFZ8odeCjdEzl3bQYQJBAOXcwmv1cqa2fFfVSlM+G9lZiZZpAjBxlaEIW7MC1W4h0M086rL5gdUY8OkXgjSeytk5e+zfbOJvQ5fZPvMLDHkCQQDLLvdm58I9b9n4mu25Ge96N+xDgVzDsHwINQLp/W2P0WDLBx43zHJLDBP9Z/1PYy33SFMsJErXflCSA1sDarwHAkAHnU+HegMJSMRHuJYUudr8UT4AkIv1BN47DmbTQEXHtzEOi3UO5rsJTyEz54Z1rcj0dzYGu8QEoEDx981hCb2pAkEAshb5jL4I19bJJAmP4lVkPSj1MnoZuABhxsPISRXzyUIJaAtWJixR5YuxncRfGA1jhcJj/GXXH6i8sC62wHj2UwJBAMqGr+odpTKCePlGAaShQXSySM1JHy+k/OzYIXYl7Vq4ftwoTkNnffiGexij410xxL3eitonqlUnPLUTGKd2ANQ=
+rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2cDn68KxBhtz6UftoQOAEOXotCPFv/VsTYhGgCEuxa+OY2WUeFRks4FGW8nrXnSQo1oxjZ892l5+ZdQ0SRo8rairWodn8LubErWBGOUmtNjOCxIDB+qvVHS8tLTyXOisU6fk8C8TiV3gjO3KLqL0B58Dm+QhkdBSAr8jwV5AzTwIDAQAB
+md5Key=df84bf8cf4c44caeede3e10fcbe023ab
+2024-07-08 16:31:39.195  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.FileUtils                 : 成功写入文件
+2024-07-08 16:31:39.195  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.controller.HelloController     : 文件路径 = D:\workspace\remitCerts\temp\daifu006\70153\checkOrderKey.txt
+2024-07-08 16:31:39.241  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 开始上传文件...
+2024-07-08 16:31:39.244  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.FTPUtils                  : 文件成功上传到 FTP 服务器 ,fileName is = daifu006.zip
+2024-07-08 16:31:39.249  INFO 7304 --- [http-nio-5678-exec-1] com.bobwu.util.HttpUtils                 : Public URL = https://b7eb-2001-b400-e450-e110-4474-5d24-6ac8-a246.ngrok-free.app 
