@@ -44,7 +44,6 @@ public class HelloController {
     private String FTP_REMOTEPATH;
 
     /**
-     * 寫入文件 -> 壓縮 -> 上傳FTP -> 取得ngrok forward (映射localhost的外網) -> 返回下載連結
      * 文件寫入、zip位置: D:\workspace\remitCerts\temp
      * ftp位置: (virtual path= / ,Native path= D:/FTP)
      * @param data
@@ -79,8 +78,8 @@ public class HelloController {
             zipFilePath = zipFilePath + ".zip";
             Path zipFile  = Paths.get(zipFilePath);
             fileUtils.zipDirectory(sourceDir ,zipFile); // zip 该资料夹
-            // 上传FTP:
-
+            
+            // 档案上传FTP:
             String method = "localFilePath";
             String downloadUrl = ftpUtils.uploadContentToFTP(zipFilePath ,method);
             if(StringUtils.isNotBlank(downloadUrl)){
@@ -109,7 +108,7 @@ public class HelloController {
     }
 
     /**
-     *  下載FTP 文件
+     * 下載FTP 文件
      * @param filename
      * @return
      * @throws IOException
