@@ -1,6 +1,8 @@
-## day5 
+spring boot ftp ngrok 
+day5 
 
-下载后会得到路径为 daifu000/merchantNo/checkOrderKey.txt 的zip档
+用途: 公司用快速产RSA服务器资料小工具
+结果: 下载后会得到路径为 daifu000/merchantNo/checkOrderKey.txt 的zip档
 
 checkOrderKey.txt:
 ```
@@ -45,8 +47,8 @@ Using these methods,terminate an ngrok session when it is no longer needed.
 
 ```bash
 curl http://127.0.0.1:4040/api/tunnels
-# {"tunnels":[{"name":"command_line","
-curl -X DELETE http://127.0.0.1:4040/api/tunnels/{tunnel_name}
+# {"tunnels":[{"name":"command_line","ID":"bf59.....
+curl -X DELETE http://127.0.0.1:4040/api/tunne"ID":"bf59ls/{tunnel_name}
 ```
 
 ## 流程
