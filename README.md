@@ -11,6 +11,38 @@ rsaPubKey=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPC/xZID9vt0+5+8xzn6fVzRb9pm2Axp
 md5Key=df84bf8cf4c44caeede3e10fcbe023ab
 ```
 
+流程
+```mermaid
+sequenceDiagram
+    participant 用户
+    participant 客户端
+    participant Ngrok
+    participant FTP服务器
+    
+    loop 前置作业
+        客户端->>FTP服务器: 先设置 FTP Server 并创建使用者 (FTP储存档案用)
+        客户端->>Ngrok: 先到官网注册，bash下指令安装你的 authtoken，映射本地 (映射内网远端下载档案用)
+    end  
+    
+    用户->>客户端: http://localhost:8080/api/getDaifuRSAFile<br>输入参数并执行api
+    note right of 用户: TODO: 这边没做画面是用postman直接打
+    loop 1. 外部api
+        客户端->外部系统: https://www.bejson.com/Bejson/Api/Rsa/getRsaKey<br>提供api所需参数、返回rsa公私钥
+        客户端->外部系统: https://www.iamwawa.cn/home/md5/ajax<br>提供api所需参数、返回md5key
+
+        note right of 客户端: TODO: 如果获取公私钥失败，切换到本地生成
+    end
+
+    客户端->>客户端:2. 取得外部api返回参数与用户相关参数<br>重组参数后生成服务器资料并写入档案<br>3. 压缩文件到固定格式(zip)存本地
+    note right of 客户端: TODO: 通过流的方式直接上传到FTP服务器，避免临时存储本地
+    客户端->>FTP服务器: 上传文件到FTP服务器
+    note right of 客户端: TODO: 应该直接返回 remoteFilePath (远端路径 + 档名)
+    Ngrok->>FTP服务器: forward映射localhost
+    Ngrok->>客户端: forward映射localhost
+    客户端->>用户: 将Ngrok的外网域名 + 远端路径 + 档名组好返回下载链接
+    用户->>FTP服务器:1. 使用下载链接<br>2. 登入后下载文件
+```
+
 ## FTP 
 
 Download FileZilla Client、FileZilla Server
@@ -51,18 +83,6 @@ curl http://127.0.0.1:4040/api/tunnels
 # {"tunnels":[{"name":"command_line","ID":"bf59.....
 curl -X DELETE http://127.0.0.1:4040/api/tunne"ID":"bf59ls/{tunnel_name}
 ```
-
-## 流程
-取得数据 -> 寫入文件 -> 壓縮文件 -> 上传ftp -> ngrok forward -> 下载ftp 的zip档
-
-0. 起FTP Server ,Ngrok ,tomcat 
-1. 取rsa公私钥(预设-密钥长度: 1024bit,密钥格式: PKCS#1) ,md5key(预设-16位小写) 
-这步可能会因为网站挂到而导致出错 (TODO: 掛了要切成自己產)
-2. 取得api数据，并将其余参数:三方平台公钥组完产生服务器资料写入档案
-(TODO: 通过流的方式可以直接将数据从输入流上传到FTP服务器，从而避免将文件临时存储在本地)
-3. 压缩文件固定格式 daifu000/merchantNo/checkOrderKey.txt (写入 当前工作目录 + remitCerts/temp/)
-4. 获取文件输入流，指定远程文件路径上传ftp D:\FTP\user1\certs (virtual path= / ,Native path= D:/FTP)
-5. 需要载ftp上的档案 ngrok forward 映射localhost，返回给使用者下載連結ftp 文件，或不打下载api 可以连 FTP Client下载
 
 ## curl
 
